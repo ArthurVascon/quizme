@@ -1,5 +1,7 @@
 //#region Imports
 import { Component, OnInit } from '@angular/core';
+import { FooterState } from '../../models/enums/footer-state';
+import { FooterService } from 'src/app/services/footer/footer.service';
 //#endregion
 @Component({
   selector: 'quizme-main',
@@ -9,9 +11,25 @@ import { Component, OnInit } from '@angular/core';
 export class MainPage implements OnInit {
 
   //#region Constructor
-  constructor() { }
+  constructor(
+    private readonly footerService:FooterService,
+  ) { 
+    this.footerService.getCurrentSelectedFooter$().subscribe(footerState => {
+      this.currentSelectedFooter = footerState;
+    })
+  }
 //#endregion
   ngOnInit() {
   }
+  
+  /**
+   * Página selecionada no footer atualmente
+   */
 
+  //#region Public Properties 
+  public currentSelectedFooter: FooterState = FooterState.MY_PROFILE;
+
+  /** Estados possíveis para o meu footer */
+  public footerState: typeof FooterState = FooterState;
+  //#endregion
 }

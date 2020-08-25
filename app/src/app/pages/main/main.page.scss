@@ -4,7 +4,7 @@
     --footer-height: calc(7.5rem + var(--ion-safe-area-bottom));
     height: 100%;
     background-color: var(--quiz-bg);
-    
+
     &-body{
         height: calc(100% - var(--footer-height));
         overflow-y: scroll;
@@ -26,16 +26,15 @@
             border-radius: 50%;
             position: relative;
             overflow: hidden;
+            --icon-color: var(--prm-quiz-disable);
 
-            &-selected{
-                fill: var(--prm-quiz-active);
+            &-active{
+                --icon-color: var(--prm-quiz-active);
             }
 
             ion-icon{
                 font-size: 2.4rem;
-                fill: var(--prm-quiz-disable);
-
-
+                fill: var(--icon-color);
             }
         }
     }

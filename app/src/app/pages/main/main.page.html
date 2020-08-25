@@ -3,15 +3,15 @@
     <router-outlet></router-outlet>
   </div>
     <div class="main-footer">
-      <div class="main-footer-icon ion-activatable">
+      <div class="main-footer-icon ion-activatable" [class.main-footer-icon-active]="currentSelectedFooter == footerState.ADD_QUESTION">
         <ion-icon name="add-circle"></ion-icon>
         <ion-ripple-effect></ion-ripple-effect>
       </div>
-      <div class="main-footer-icon ion-activatable">
+      <div class="main-footer-icon ion-activatable" [class.main-footer-icon-active]="currentSelectedFooter == footerState.MY_PROFILE">
         <ion-icon name="school"></ion-icon>
         <ion-ripple-effect></ion-ripple-effect>
       </div>
-      <div class="main-footer-icon ion-activatable">
+      <div class="main-footer-icon ion-activatable" [class.main-footer-icon-active]="currentSelectedFooter == footerState.ALL_QUESTIONS">
         <ion-icon  name="bookmark"></ion-icon>
         <ion-ripple-effect></ion-ripple-effect>
       </div>
