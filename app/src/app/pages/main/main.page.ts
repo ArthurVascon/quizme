@@ -1,14 +1,16 @@
+//#region Imports
 import { Component, OnInit } from '@angular/core';
-
+//#endregion
 @Component({
-  selector: 'app-main',
+  selector: 'quizme-main',
   templateUrl: './main.page.html',
   styleUrls: ['./main.page.scss'],
 })
 export class MainPage implements OnInit {
 
+  //#region Constructor
   constructor() { }
-
+//#endregion
   ngOnInit() {
   }
 

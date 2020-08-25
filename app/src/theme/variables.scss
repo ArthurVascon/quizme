@@ -74,7 +74,12 @@
   --ion-color-light-contrast-rgb: 0, 0, 0;
   --ion-color-light-shade: #d7d8da;
   --ion-color-light-tint: #f5f6f9;
+
+ 
 }
+
+  
+
 
 @media (prefers-color-scheme: dark) {
   /*
@@ -145,6 +150,14 @@
     --ion-color-light-contrast-rgb: 255,255,255;
     --ion-color-light-shade: #1e2023;
     --ion-color-light-tint: #383a3e;
+    
+    //** Quiz Me Colors **/
+    --quiz-bg: #FFE5D9;
+
+     //** Icon Colors **/
+    --prm-quiz-disable: #9615CF;
+    --prm-quiz-active: #f2f2f2;
+    --quiz-bg-footer: #551463;
   }
 
   /*
