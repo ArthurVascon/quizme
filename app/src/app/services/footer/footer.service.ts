@@ -11,7 +11,7 @@ export class FooterService {
   constructor(
     private readonly router: Router,
   ) { 
-    this.router.events.subscribe(() => {
+    this.router.events.subscribe(next => {
       const currentUrl = this.router.url;
       if(currentUrl.startsWith('/main/add-coments'))
         return void this.selectedFooterSubject.next(FooterState.ADD_QUESTION);
