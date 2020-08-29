@@ -1,4 +1,6 @@
 <!-- Todas perguntas geradas pelo professor-->
-<div class="main-body">
-    <router-outlet></router-outlet>
-  </div>
+<div class="all-coments">
+    <ng-container *ngFor="let comment of listComment; trackBy: trackById">
+      <quizme-comment-item [content]="comment"></quizme-comment-item>
+    </ng-container>
+</div>
