@@ -13,7 +13,7 @@ export class FooterService {
   ) { 
     this.router.events.subscribe(next => {
       const currentUrl = this.router.url;
-      if(currentUrl.startsWith('/main/add-coments'))
+      if(currentUrl.startsWith('/main/add-question'))
         return void this.selectedFooterSubject.next(FooterState.ADD_QUESTION);
       
       if(currentUrl.startsWith('/main/my-profile'))
